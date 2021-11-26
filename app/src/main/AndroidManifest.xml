@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.animals3D">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/icon_animals"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_animals_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.app.animals3D.ActivitySounds"
+            android:parentActivityName="com.app.animals3D.MainActivity" />
+        <activity
+            android:name="com.app.animals3D.Activity3D"
+            android:parentActivityName="com.app.animals3D.MainActivity" />
+        <activity android:name="com.app.animals3D.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+            "AR Optional" app, contains non-AR features that can be used when
+            "Google Play Services for AR" (ARCore) is not available.
+        -->
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="optional" />
+
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8303761704769767~7687877317" />
+    </application>
+
+</manifest>
